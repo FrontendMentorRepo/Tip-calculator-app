@@ -1,19 +1,40 @@
 import styled from "styled-components";
 
+export const Logo = styled.img`
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media only screen and (max-width: 600px) {
+    top: 8%;
+  }
+`;
+
 export const BoxWrapper = styled.div`
-  width: 45%;
-  margin: auto;
+  width: 700px;
   overflow: hidden;
   background-color: white;
   padding: 30px;
   border-radius: 15px;
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+    display: block;
+  }
 `;
 
 export const LeftBox = styled.div`
   float: left;
   width: 47%;
   margin-right: 35px;
+  @media only screen and (max-width: 600px) {
+    float: none;
+    width: 100%;
+  }
 `;
 export const RightBox = styled.div`
   float: right;
@@ -22,6 +43,13 @@ export const RightBox = styled.div`
   border-radius: 15px;
   padding: 25px;
   position: relative;
+  @media only screen and (max-width: 600px) {
+    margin-top: 25px;
+    float: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 `;
 
 export const TitleSection = styled.div`
@@ -30,11 +58,12 @@ export const TitleSection = styled.div`
 `;
 export const InputNumber = styled.input`
   width: 100%;
-  background: hsl(185, 41%, 84%);
+  background-color: hsl(185, 41%, 84%);
   height: 25px;
   border: none;
   border-radius: 5px;
-  outline: none;
+  outline-color: #09be82;
+  text-align: end;
 `;
 
 export const MiddleSectionWrapper = styled.div`
@@ -56,6 +85,25 @@ export const GridItem = styled.div`
   border-radius: 5px;
   height: 35px;
   cursor: pointer;
+  focus-within {
+    background: #ff8;
+    color: black;
+  }
+`;
+
+export const CustomItem = styled.input`
+  box-sizing: border-box;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  display: flex;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+  outline-color: #09be82;
 `;
 
 export const SectionStandard = styled.div`
@@ -88,4 +136,13 @@ export const ButtonReset = styled.button`
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  :active {
+    background-color: hsl(189, 41%, 97%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    bottom: 0px;
+    margin: 10px 0px;
+  }
 `;
