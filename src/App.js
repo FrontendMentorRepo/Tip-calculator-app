@@ -115,7 +115,12 @@ function App() {
             </ContainerText>
             <ContainerNumber>${totalPerson.toFixed(2)}</ContainerNumber>
           </SectionStandard>
-          <ButtonReset onClick={reset}>RESET</ButtonReset>
+          <ButtonReset
+            style={{ opacity: billAmount === 0 ? "0.2" : "1" }}
+            onClick={reset}
+          >
+            RESET
+          </ButtonReset>
         </RightBox>
       </BoxWrapper>
     </>
